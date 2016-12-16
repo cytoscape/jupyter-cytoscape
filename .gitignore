@@ -1,2 +1,13 @@
-node_modules
-build
+*.egg-info/
+.ipynb_checkpoints/
+dist/
+build/
+*.py[cod]
+node_modules/
+
+# Compiled javascript
+ipyleaflet/static/
+ipyleaflet/staticlab/
+
+# OS X
+.DS_Store

@@ -1,18 +1,30 @@
 {
-  "name": "jupyter-cytoscape",
-  "version": "0.0.0",
-  "description": "A Cytoscape.js plugin for Jupyter",
-  "main": "build/index.js",
+  "name": "cyjs",
+  "version": "0.0.1",
+  "description": "cytoscape.js in a Jupyter widget",
+  "author": "Paul Shannon",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jupyter/cyjs-jupyter.git"
+  },
+  "keywords": [
+    "jupyter",
+    "widgets",
+    "ipython",
+    "ipywidgets"
+  ],
   "scripts": {
-    "build": "babel src -d build --sourceMaps=inline"
+    "prepublish": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-preset-es2015": "^6.14.0",
-    "chai": "^3.5.0",
-    "mocha": "^3.0.2"
+    "json-loader": "^0.5.4",
+    "webpack": "^1.12.14"
   },
   "dependencies": {
-    "cytoscape": "2.7.10"
+    "cytoscape": "^2.7.10",
+    "jupyter-js-widgets": "^2.0.12",
+    "underscore": "^1.8.3"
   }
 }
