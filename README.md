@@ -8,7 +8,7 @@ Installation
 
 This is an early alpha release, best suited to developers. To install:
 
-* [install anaconda](https://www.continuum.io/downloads) or update: `conda update anaconda`
+* [install anaconda](https://www.continuum.io/downloads) (or update if it is already installed: `conda update anaconda`)
 * cd to your local github repo root directory
 * `git clone https://github.com/cytoscape/jupyter-cytoscape.git`
 * cd jupyter-cytoscape
