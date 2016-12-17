@@ -1,0 +1,17 @@
+source	edgeType	target	cond1	cond2	cond3
+R1	consumes	a	701	369	691
+R1	consumes	b	885	389	556
+R1	produces	c	274	692	927
+R2	consumes	a	326	364	181
+R2	consumes	d	742	90	643
+R2	produces	e	832	660	96
+R3	consumes	c	83	275	394
+R3	consumes	f	318	224	587
+R3	produces	h	312	448	170
+R3	produces	i	661	94	7
+R4	consumes	x	340	197	281
+R4	consumes	y	883	12	197
+R4	produces	z	784	172	5
+R4	consumes	w	407	712	518
+R5	consumes	z	642	822	306
+R5	produces	z1	759	218	600
