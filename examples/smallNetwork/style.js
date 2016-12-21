@@ -40,11 +40,15 @@ vizmap = [
        }},
 
    {selector: 'node[type="gene"][expression < 0]', css: {
-      "background-color": "mapData(expression, -3, 0, green, white)"
+      "background-color": "mapData(expression, -3, 0, green, white)",
+      "width": "mapData(expression, -3, 0, 100, 30)",
+      "height": "mapData(expression, -3, 0, 100, 30)"
        }},
    
    {selector: 'node[type="gene"][expression >=0]', css: {
-      "background-color": "mapData(expression, 0, 3, white, red)"
+      "background-color": "mapData(expression, 0, 3, white, red)",
+      "width": "mapData(expression, 0, 3, 30, 100)",
+      "height": "mapData(expression, 0, 3, 30, 100)"
        }},
    
    {selector: 'edge[edgeType="produces"][flux < 0]', css: {
