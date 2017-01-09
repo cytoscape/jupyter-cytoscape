@@ -2,7 +2,7 @@ FROM ubuntu
 
 ADD . /workdir
 WORKDIR /workdir
-RUN apt update && apt install -y make python-igraph npm nodejs-legacy wget python && \
+RUN apt update && apt install -y make python-igraph npm nodejs-legacy wget python python-dev && \
     wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && pip2 install -U pandas jupyter && npm install webpack -g && \
     cd js && npm update && webpack --config webpack.config.js && \
     cd .. && pip2 install -e . && \
