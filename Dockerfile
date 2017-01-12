@@ -1,20 +1,17 @@
-FROM ubuntu
+FROM jupyter/base-notebook
+ADD . /home/jovyan/work
+WORKDIR /home/jovyan/work
 
-ADD . /workdir
-WORKDIR /workdir
-RUN apt update && apt install -y make python-igraph npm nodejs-legacy wget python python-dev && \
-    wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && pip2 install -U pandas jupyter && npm install webpack -g && \
+USER root
+RUN chown -R jovyan:users /home/jovyan/work && wget https://deb.nodesource.com/setup_6.x && \
+    bash setup_6.x && apt-get install -y nodejs pkg-config gcc libigraph0-dev
+
+USER $NB_USER
+RUN conda update -y pip && conda install -y pandas && \
+    npm install webpack -g && pip install python-igraph && \
     cd js && npm update && webpack --config webpack.config.js && \
-    cd .. && pip2 install -e . && \
+    cd .. && pip install -e . && \
     cd js && npm install && \
-    python -m jupyter nbextension install --user --py cyjs && \
-    python -m jupyter nbextension enable --py --sys-prefix widgetsnbextension && \
-    python -m jupyter nbextension enable --user --py --sys-prefix cyjs
-
-ENV TINI_VERSION v0.6.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
-RUN chmod +x /usr/bin/tini
-ENTRYPOINT ["/usr/bin/tini", "--"]
-
-EXPOSE 8888
-CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
+    jupyter nbextension install --user --py cyjs && \
+    jupyter nbextension enable --py --sys-prefix widgetsnbextension && \
+    jupyter nbextension enable --user --py --sys-prefix cyjs
