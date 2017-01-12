@@ -15,7 +15,7 @@ docker pull kozo2/jupyter-cytoscape
 docker run -d -p 8888:8888 kozo2/jupyter-cytoscape start-notebook.sh --NotebookApp.token=''
 ```
 
-and open a web browser to `localhost:8888`.
+and open a web browser to `http://localhost:8888/notebooks/examples/smallNetwork/smallNetwork.ipynb`.
 
 Our Docker image is based on **Base Jupyter Notebook Stack**.
 See https://github.com/jupyter/docker-stacks/tree/master/base-notebook for more details on the Docker command options.
