@@ -11,8 +11,8 @@ Quick start
 If you're familiar with Docker, the following commands should work in most cases:
 
 ```
-docker pull kozo2/jupyter-cytoscape
-docker run -d -p 8888:8888 kozo2/jupyter-cytoscape start-notebook.sh --NotebookApp.token=''
+docker pull cytoscape/jupyter-cytoscape
+docker run -d -p 8888:8888 cytoscape/jupyter-cytoscape start-notebook.sh --NotebookApp.token=''
 ```
 
 and open a web browser to `http://localhost:8888/notebooks/examples/smallNetwork/smallNetwork.ipynb`.
