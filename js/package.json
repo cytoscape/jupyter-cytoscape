@@ -1,6 +1,7 @@
 {
   "name": "cyjs",
   "version": "0.0.1",
+  "license": "MIT",
   "description": "cytoscape.js in a Jupyter widget",
   "author": "Paul Shannon",
   "main": "src/index.js",
