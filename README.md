@@ -1,5 +1,6 @@
 jupyter-cytoscape
 ===============================
+[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/cytoscape/jupyter-cytoscape/master?filepath=examples/smallNetwork)
 
 cytoscape.js in a Jupyter notebook widget
 
@@ -7,6 +8,14 @@ cytoscape.js in a Jupyter notebook widget
 
 Quick start
 -----------
+
+### Run this now on Binder
+
+No installation needed!
+
+[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/cytoscape/jupyter-cytoscape/master?filepath=examples/smallNetwork)
+
+### Run this on your Docker environment
 
 If you're familiar with Docker, the following commands should work in most cases:
 
@@ -31,5 +40,5 @@ This is an early alpha release, best suited to developers. To install:
 * `git clone https://github.com/cytoscape/jupyter-cytoscape.git`
 * cd jupyter-cytoscape
 * make
-    
+
 A stand-alone version, useful for quick developer experiments, and <b><i>not</i></b> packaged up into a jupyter nbextension, is found in <i>./standalone/devel/</i>
